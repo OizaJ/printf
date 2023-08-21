@@ -9,10 +9,11 @@
 int _print_int(double val)
 {
 	unsigned int count = 0;
+	int nwval;
 
 	if (val < 0)
 	{
-		_putchar("-");
+		_putchar(45);
 
 		val == -1;
 		count += 1;
@@ -23,7 +24,8 @@ int _print_int(double val)
 		count = count + _print_int(val / 10);
 	}
 
-	_putchar((val % 10) + "0");
+	nwval = (unsigned int)val;
+	_putchar((nwval % 10) + 48);
 	count += 1;
 
 	return (count);
@@ -41,7 +43,7 @@ int print_unsignedint(unsigned int val)
 	int count = 0;
 
 	if (val / 10 != 0)
-		count = count + print_int(val / 10);
+		count = count + _print_int(val / 10);
 
 	_putchar((val % 10) + '0');
 	count++;
@@ -60,9 +62,9 @@ void print_float(double val)
 	int dec = 1000000;
 	int i = (int)val;
 
-	print_int(i);
+	_print_int(i);
 	val = (val - i) * dec;
 	i = (int)val;
 	_putchar('.');
-	print_int(i);
+	_print_int(i);
 }
