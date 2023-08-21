@@ -15,7 +15,7 @@ int _print_int(double val)
 	{
 		_putchar(45);
 
-		val == -1;
+		val = -1;
 		count += 1;
 	}
 
@@ -45,7 +45,7 @@ int print_unsignedint(unsigned int val)
 	if (val / 10 != 0)
 		count = count + _print_int(val / 10);
 
-	_putchar((val % 10) + '0');
+	_putchar((val % 10) + 48);
 	count++;
 	return (count);
 }
