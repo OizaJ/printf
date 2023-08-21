@@ -31,9 +31,9 @@ int _print_int(double val)
 
 
 /**
- * print_unsignedint- prints unsigned integer
- * @val: integer to print
- * Return: cp count of printed chars
+ * print_unsignedint- print unsigned integer
+ * @val: integer to be printed
+ * Return:  count of printed chars
  */
 
 int print_unsignedint(unsigned int val)
@@ -46,4 +46,23 @@ int print_unsignedint(unsigned int val)
 	_putchar((val % 10) + '0');
 	count++;
 	return (count);
+}
+
+
+
+/**
+ * print_float- prints a float
+ * @val:the number
+ */
+
+void print_float(double val)
+{
+	int dec = 1000000;
+	int i = (int)val;
+
+	print_int(i);
+	val = (val - i) * dec;
+	i = (int)val;
+	_putchar('.');
+	print_int(i);
 }
