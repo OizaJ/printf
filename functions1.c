@@ -10,10 +10,10 @@
 int print_binary(unsigned int val)
 {
 
-	int count;
+	unsigned int count;
 	int i = 0;
 	int j;
-	long int array[32];
+	unsigned long int array[32];
 
 	if (val == 0)
 	{
