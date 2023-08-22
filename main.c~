@@ -1,6 +1,0 @@
-#include "main.h"
-
-int main()
-{
-	return (_printf("print %b", 4));
-}
