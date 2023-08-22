@@ -32,7 +32,7 @@ int print_binary(unsigned int val)
 
 	while (j >= 0)
 	{
-		_putchar(array[j]);
+		_putchar(array[j] + (48));
 		count++;
 		j--;
 	}
