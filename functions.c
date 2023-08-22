@@ -57,30 +57,4 @@ int print_unsignedint(unsigned int val)
  * @val:the number
  */
 
-void print_float(double val)
-{
-    if (val < 0)
-    {
-        _putchar('-');
-        val = -val;
-    }
 
-    int intPart = (int)val;
-    double fracPart = val - intPart;
-
-    _print_int(intPart);  // Print the integer part
-
-    if (fracPart != 0)
-    {
-        _putchar('.');  // Print the decimal point
-
-        // Print up to 6 decimal places (adjust as needed)
-        for (int i = 0; i < 6; i++)
-        {
-            fracPart *= 10;
-            int digit = (int)fracPart;
-            _putchar('0' + digit);
-            fracPart -= digit;
-        }
-    }
-}
