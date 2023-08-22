@@ -15,7 +15,7 @@ int _print_int(double val)
 	{
 		_putchar(45);
 
-		val = -1;
+		val = -val;
 		count += 1;
 	}
 
