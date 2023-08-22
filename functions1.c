@@ -2,8 +2,7 @@
 
 /**
  *print_binary - prints an unsigned number
- *@val - 
- *
+ *@val - unsigned integer
  *Return: number of characters printed on screen
  */
 
@@ -39,7 +38,7 @@ int print_binary(unsigned int val)
 	return (count);
 }
 
-c
+
 int print_hex(unsigned int n, unsigned int count)
 {
 	unsigned int array[11];
