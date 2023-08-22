@@ -6,7 +6,7 @@
  * print_octal - octal conversion and printing of integer
  * @n: unsigned int
  * Return: length of printed chars
- */c
+ */
 
 int print_octal(unsigned int n)
 {
