@@ -60,27 +60,27 @@ int _printf(const char *format, ...)
 					);
 				break;
 			case 'o':
-				count = count + print_octal(va_arg(args, unsigned int)
+				count += print_octal(va_arg(args, unsigned int)
 					);
 				break;
 
 			case 'X':
-				count = count + print_hex(va_arg(args, unsigned int),
+				count += print_hex(va_arg(args, unsigned int),
 						    1);
 				break;
 
 			case 'x':
-				count = count + print_hex(va_arg(args, unsigned int),
+				count += print_hex(va_arg(args, unsigned int),
 						    0);
 				break;
 
 			case 'R':
-				count = count + print_rot13(va_arg(args, char*
+				count += print_rot13(va_arg(args, char*
 								    ));
 				break;
 
 			case 'r':
-				count = count + print_rev(va_arg(args, char*));
+				count += print_rev(va_arg(args, char*));
 				break;
 
 			default:
