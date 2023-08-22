@@ -38,3 +38,34 @@ int print_binary(unsigned int val)
 	}
 	return (count);
 }
+
+c
+int print_hex(unsigned int n, unsigned int count)
+{
+	unsigned int array[11];
+	int a = 0;
+	int size = 0;
+
+	while (n)
+	{
+		array[a] = n % 16;
+		n /= 16;
+		a++;
+	}
+	a--;
+
+	while (a >= 0)
+	{
+		if (array[a] > 9 && count == 0)
+			_putchar((array[a] - 10) + 97);
+
+		else if (array[a] > 9 && count == 1)
+			_putchar((array[a] - 10) + 65);
+
+		else
+			_putchar(array[a] + '0');
+		size++;
+		a--;
+	}
+	return (size);
+}
